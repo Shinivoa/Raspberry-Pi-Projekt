@@ -1,0 +1,125 @@
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+* {
+  margin: 8px;
+  padding: 0;
+  width: 100;
+  box-sizing: border-box;
+}
+label {
+  color: rgba(0, 184, 0, 0.747);
+}
+
+label2 {
+  color: rgba(211, 0, 70, 0.767);
+}
+
+body {
+  font-family: "Gill Sans Extrabold", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+}
+header {
+  padding: 20px;
+  text-align: center;
+  background-color: #1e1e1e;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.JEW {
+  width: 400px;
+  height: 500px;
+}
+
+.Logo svg {
+  width: 50px;
+  left: auto;
+}
+
+.navigation a {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 50px;
+}
+
+.Top {
+  align-items: center;
+  position: sticky;
+}
+
+.Navi {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  padding: 20px, 100px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.288);
+  background-color: #1e1e1e;
+}
+
+main {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  color: #fff;
+}
+
+section {
+  background-color: #1e1e1e;
+  padding: 5px;
+  border-radius: 25px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.288);
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+section p {
+  margin: 25px;
+}
+
+section ul {
+  padding-left: 20px;
+}
+
+section li {
+  margin-bottom: 15px;
+}
+
+footer {
+  color: #fff;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  padding: 20px, 100px;
+  padding: 5px;
+  border-radius: 25px;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.288);
+  background-color: #1e1e1e;
+  margin-right: 50px;
+}
