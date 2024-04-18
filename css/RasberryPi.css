@@ -4,6 +4,18 @@
   padding: 20px;
 }
 
+.Maciek {
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  position: sticky;
+}
+
+.Top {
+  align-items: center;
+  position: sticky;
+}
+
 .text {
 
   padding: 5rem;
@@ -40,11 +52,6 @@
   transform: translateX(-50px);
 }
 
-.JEW {
-  width: 400px;
-  height: 500px;
-}
-
 .Logo svg {
   width: 50px;
   left: auto;
@@ -56,11 +63,6 @@
   font-weight: 500;
   text-decoration: none;
   margin-right: 50px;
-}
-
-.Top {
-  align-items: center;
-  position: sticky;
 }
 
 .Navi {
