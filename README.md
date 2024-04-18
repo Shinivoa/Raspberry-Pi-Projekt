@@ -1,7 +1,7 @@
 ![image](https://github.com/Shinivoa/Raspberry-Pi-Projekt/assets/135438945/3487c9de-0e8b-40ea-9aaf-6e13575803e9)
 
 
-###Raspberry Pi Projekt
+### Raspberry Pi Projekt
 
 This repository showcases a website development project that is based on a real-world project created by the author. The project leverages the capabilities of the Raspberry Pi platform to host and serve a website, demonstrating practical web development skills within the context of embedded systems.
 
