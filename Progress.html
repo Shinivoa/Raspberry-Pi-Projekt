@@ -20,51 +20,43 @@
             </div>
             <section class="Navi">        
               <nav class="navigation">
-              <a href="RasberryPi.html">Home</a>
-              <a href="">Detallierte Anleitungen</a>
+              <a class="light-up-button" href="RasberryPi.html">Home</a>
+              <a class="light-up-button" href="">Detallierte Anleitungen</a>
             </section>
           </header>          
           <main>
-            <section class="whole_shit">
-            <div class="content">
-              <div class="text">
-              <h1>Installation von Raspberry OS</h1>
-              <p>zuerst müssten wir den OS installieren was relativ einfach ist, 
-                denn man kann das Tool von Raspberry Pi Seite runterladen und dort hat man den 
-                direkten zugriff auf die ganzen Versionen. </p>
+            <script src="/javascript/app.js"></script>
+            <section>
+                <div class="content">
+                    <div class="text">
+                        <h1>Installation von Raspberry OS</h1>
+                        <p>Zuerst müssten wir das Betriebssystem installieren, was relativ einfach ist, da man das Tool von der Raspberry Pi Seite herunterladen kann und dort den direkten Zugriff auf die verschiedenen Versionen hat.</p>
+                    </div>
+                    <div class="image">
+                        <img class="slide-in" src="/images/choose.png" alt="Downlaod Tool">
+                    </div>
+                </div>
+                <div class="content">
+                  <div class="text">
+                      <p>Nachdem wir es installiert haben, müssen wir die passende Version für unseren Raspberry Pi auswählen und anschließend das Betriebssystem.</p>
+                  </div>
+                  <div class="image">
+                      <img class="slide-in" src="/images/OS.png" alt="OS Choosing">
+                      <img class="slide-in" src="/images/OSS.png" alt="OS Choosing">               
               </div>
-              <div class="image">
-                <img src="/Raspberry-Pi-Projekt/images/choose.jpg" alt="Tool Download">
-              </div>
-            </div>
             </section>
             <section>
-            <div class="content">
-              <div class="text">
-                <p>Nachdem wir es installieren müssten wir die Korrekte Version 
-                von unsren RaspberryPi auswählen und anschlißend das OS.
-                </p>
-              </div>
-              <div class="image">
-               <img src="/Raspberry-Pi-Projekt/images/OSS.jpg" alt="OS choosing">
-               <img src="/Raspberry-Pi-Projekt/images/OS.jpg" alt="-||-">
-              </div>
-            </div>
+                <div class="content">
+                    <div class="text">
+                        <h1>Docker und Repositories</h1>
+                        <p>In diesem Teil müssen wir Docker auf dem frisch installierten Raspberry OS installieren. Aber zuerst müssen wir irgendwie auf den Raspberry Pi zugreifen. Dazu verwenden wir Kitty, damit wir uns über die statische IP-Adresse verbinden können.</p>
+                    </div>
+                    <div class="image">
+                        <img src="/images/dockershit.jpg" alt="Docker logo embded">
+                    </div>
+                </div>
             </section>
-            <section class="whole_shit">
-            <div class="content">
-              <div class="text">
-                <h1>Docker und Repositories</h1>
-                  <p> In diesen Part müssten wir den Docker auf den frisch Installieren Raspberry OS installieren.
-                      Aber zuerst müssten wir irgendwie auf den Raspberry kommen, dazu benutzten wir den Kitty 
-                      damit wir uns über die static IP verbinden konnten.
-                  </p>
-                <div class="iamge"></div>
-              </div>
-            </div>
-            </section>
-          </main>
-        </body>
-        <script scr="app.js"></script>
+        </main>
     </div>
+</body>
 </html>
