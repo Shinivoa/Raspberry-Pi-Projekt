@@ -4,18 +4,20 @@
   padding: 20px;
 }
 
-
 /* Styles for code block */
 pre {
   background-color: #1e1e1e;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 3px solid #ddd;
+  border-radius: 10px;
   padding: 10px;
-  overflow-x: auto;
-  max-width: calc(100% - 20px); /* Adjust the value as needed */
+  font-weight: normal;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  max-width: calc(100% - 30px); /* Adjust the value as needed */
+  background-color: #000000;
 }
 
-code.text {
+code {
   font-family: "Courier New", Courier, monospace;
   font-size: 14px;
   color: #ddd; /* Default text color */
@@ -24,23 +26,30 @@ code.text {
 /* Syntax highlighting */
 .keyword {
   color: #569CD6 !important; /* Keyword color */
+  margin: 0;
+  padding: 0;
 }
 
 .comment {
   color: #6A9955 !important; /* Comment color */
+  margin: 0;
+  padding: 0;
 }
 
 .string {
   color: #CE9178 !important; /* String color */
+  margin: 0;
+  padding: 0;
 }
 
 .number {
   color: #B5CEA8 !important; /* Number color */
+  margin: 0;
+  padding: 0;
 }  
 
-
-
 * {
+  font-family: "Gill Sans Extrabold", sans-serif;
   margin: 8px;
   padding: 0;
   width: 100%;
@@ -59,7 +68,7 @@ code.text {
   transform: translateX(0); /* Slide the image in */
 }
 
-/* just maciek(code block cuz he's fat as hell) */
+/*just maciek(code block cuz he's fat as hell)*/
 .Maciek {
   height: 100vh;
   width: 100%;
@@ -71,17 +80,20 @@ code.text {
   align-items: center;
   position: sticky;
 }
-/* texts and content */
 
+/* texts and content */
 .content {
   display: flex;
   overflow: hidden;
 }
 
 .text {
+  font-family: "Gill Sans Extrabold", sans-serif;
   padding: 5rem;
   font-size: 1.2rem;
   opacity: 1;
+  font-weight: bold;
+  color: #fff;
 }
 
 .image img {
@@ -98,7 +110,7 @@ code.text {
 
 .navigation a {
   font-size: 20px;
-  color: rgb(255, 255, 255);
+  color: #fff;
   font-weight: 500;
   text-decoration: none;
   margin-right: 50px;
@@ -120,7 +132,6 @@ code.text {
   border-radius: 20px;
 }
 
-
 .Navi {
   justify-content: space-between;
   display: flex;
@@ -131,7 +142,8 @@ code.text {
   border-radius: 25px;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.288);
 }
-/* items alligment and colors */
+
+/* items alignment and colors */
 main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
@@ -140,7 +152,6 @@ main {
 }
 
 body {
-  font-family: "Gill Sans Extrabold", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #1e1e1e;
@@ -163,19 +174,19 @@ footer > * {
   margin-right: 10px; /* Adjust margin as needed to control spacing between elements */
 }
 
-
-/*labels and special sections */
-label {
+/* labels and special sections */
+.label {
   color: rgba(0, 184, 0, 0.747);
 }
 
-label2 {
+.label2 {
   color: rgba(211, 0, 70, 0.767);
 }
 
 header h1 {
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 header {
@@ -186,7 +197,7 @@ header {
 
 header p {
   font-size: 1.2em;
-  color: #666;
+  color: #fff;
 }
 
 section {
@@ -200,6 +211,7 @@ section h2 {
   margin-top: 0;
   margin-left: 11px;
   font-size: 23px;
+  color: #fff;
 }
 
 section p {
@@ -213,9 +225,11 @@ section ul {
 section li {
   margin-bottom: 15px;
 }
+
 /* headings */
 h4 {
   margin: 0;
   font-size: 35px;
   margin-left: 10px;
-}
+  color: #fff;
+}     

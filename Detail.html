@@ -32,21 +32,109 @@
             <div class="text">
               <h4>Temperatur Sensor</h4>
               <p><h2>Beschreibung und Funktion</h2>
-              
+                Der Thermosensor von Joy-IT für Raspberry Pi ist ein präziser Temperatursensor, 
+                der zur Überwachung und Messung von Umgebungstemperaturen verwendet wird. 
+                Er ist einfach an den GPIO-Pins des Raspberry Pi anzuschließen und ermöglicht 
+                die Erfassung von Temperaturdaten in Echtzeit. Der Sensor zeichnet sich durch eine 
+                hohe Genauigkeit und Zuverlässigkeit aus und ist ideal für Anwendungen wie Wetterstationen, 
+                Heizungssteuerungen und Temperaturüberwachung in Smart-Home-Systemen. Die Integration in Projekte 
+                erfolgt über gängige Programmiersprachen wie Python, was eine flexible und benutzerfreundliche Nutzung ermöglicht.
               </p>
-            </div>
-            <div class="imgage">
-              <img src="" alt="">
+              <div class="imgage">
+                <img src="/images/KY-001.png" alt="Thermosensor">
+              </div>
+              <pre>
+                <code class="text">
+<span class="keyword">import</span> time
+<span class="keyword">from</span> w1thermsensor <span class="keyword">import</span> W1ThermSensor
+<span class="keyword">from</span> flask <span class="keyword">import</span> Flask, jsonify
+                  
+<span class="comment"># Flask-Anwendung initialisieren</span>
+  app = Flask(__name__)
+                  
+<span class="comment"># Initialisieren des Temperatursensors</span>
+  sensor = W1ThermSensor()
+                  
+<span class="comment"># Schwellwert für die Temperaturwarnung</span>
+  TEMP_THRESHOLD = <span class="number">30.0</span>  <span class="comment"># Beispiel: 30°C</span>
+                  
+<span class="keyword">def</span> log_temperature(temperature):
+<span class="keyword">with</span> <span class="string">open</span>(<span class="string">"temperature_log.txt"</span>, <span class="string">"a"</span>) <span class="keyword">as</span> log_file:
+  log_file.write(<span class="string">f"{time.strftime('%Y-%m-%d %H:%M:%S')}: {temperature:.2f}°C\n"</span>)
+                  
+  @app.route(<span class="string">'/temperature'</span>, methods=[<span class="string">'GET'</span>])
+<span class="keyword">def</span> get_temperature():
+  temperature = sensor.get_temperature()
+<span class="keyword">return</span> jsonify(temperature=temperature)
+                  
+<span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:
+<span class="keyword">while</span> <span class="number">True</span>:
+  temperature = sensor.get_temperature()
+  print(<span class="string">f"Die aktuelle Temperatur beträgt {temperature:.2f}°C"</span>)
+                  
+<span class="comment"># Temperatur in Datei loggen</span>
+  log_temperature(temperature)
+                  
+<span class="comment"># Warnung bei Überschreiten des Schwellwerts</span>
+<span class="keyword">if</span> temperature > TEMP_THRESHOLD:
+  print(<span class="string">"WARNUNG: Temperaturüberschreitung!"</span>)
+                  
+<span class="comment"># Wartezeit</span>
+  time.sleep(<span class="number">1</span>)
+                  
+<span class="comment"># Starten des Flask-Webservers</span>
+  app.run(host=<span class="string">'127.0.0.1'</span>, port =<span class="number">5000</span>)
+                </code>
+              </pre>
             </div>
           </section>
           <section>
             <div class="text">
               <h1>Bewegungsmelder</h1>
-              <p></p>
+              <p class="text">
+                Der Bewegungssensor von Joy-IT ist ein hochpräzises Gerät, das Bewegungen in seiner Umgebung erfasst und in elektronische Signale umwandelt. 
+                Dieser Sensor besteht aus verschiedenen Komponenten wie Infrarot (IR)-Sensoren, Pyroelektrischen Sensoren und anderen Sensorelementen, die zusammenarbeiten, 
+                um Bewegungen zu erkennen und zu messen. Das Gerät ist typischerweise in einem kompakten Gehäuse untergebracht und verfügt über Anschlüsse, 
+                um mit anderen elektronischen Geräten verbunden zu werden.
+                Die Hauptfunktion des Bewegungssensors besteht darin, Bewegungen in seinem Erfassungsbereich zu erkennen. Sobald sich eine Person oder ein Objekt bewegt, 
+                erzeugt der Sensor Signale, die darauf hinweisen, dass eine Bewegung stattgefunden hat. Diese Signale können dann von angeschlossenen Geräten interpretiert 
+                werden, um bestimmte Aktionen auszulösen. Zum Beispiel kann der Bewegungssensor in Sicherheitsanlagen verwendet werden, um eine Alarmanlage auszulösen, 
+                wenn eine unbefugte Bewegung erkannt wird. Ebenso kann er in Beleuchtungssystemen eingesetzt werden, um Lichtquellen automatisch einzuschalten, 
+                wenn sich jemand in einem Raum befindet, und sie auszuschalten, wenn keine Bewegung erkannt wird.
+                Insgesamt ist der Bewegungssensor von Joy-IT ein vielseitiges und nützliches Gerät, das in einer Vielzahl von Anwendungen eingesetzt werden kann, 
+                um Bewegungen zu erkennen und entsprechend zu reagieren.
+              </p>
             </div>
-            <div class="image">
-              <img src="" alt="">
-            </div>
+            <div>
+            <pre><code class="text">
+<span class="keyword">import</span> RPi.GPIO<span class="keyword"> as </span>GPIO
+<span class="keyword">import</span> time
+
+<span class="comment"># GPIO-Pin für den Bewegungsmelder</span>
+  motion_pin = <span class="number"></span><span class="number">17</span>
+
+<span class="comment"># Setup</span>
+  GPIO.<span class="keyword">setmode</span>(GPIO.BCM)
+  GPIO.<span class="keyword">setup</span>(motion_pin, GPIO.IN)
+
+<span class="keyword">def motion_detected</span>(channel):
+<span class="keyword">    print</span>(<span class="string">"Bewegung erkannt!"</span>)
+
+<span class="keyword">try:</span>
+<span class="comment"># Ereignisbehandlung für Bewegungserkennung</span>
+    GPIO.<span class="keyword">add_event_detect</span>(motion_pin, GPIO.RISING, callback = <span class="keyword">motion_detected</span>)
+
+<span class="keyword">print</span>(<span class="string">"Bewegungsmelder aktiviert. Warten auf Bewegung..."</span>)
+
+<span class="keyword">while True:</span>    
+        time.<span class="keyword">sleep</span>(<span class="number">1</span>)
+
+<span class="keyword">except</span> KeyboardInterrupt:
+    <span class="keyword">print</span>(<span class="string">"Programm beendet."</span>)
+    GPIO.<span class="keyword">cleanup</span>()
+
+            </code></pre>
+          </div>
           </section>
         </main>
         <footer>
