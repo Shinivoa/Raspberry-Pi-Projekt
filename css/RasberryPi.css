@@ -3,6 +3,51 @@
   margin: 0 auto;
   padding: 20px;
 }
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Styles for code block */
+pre {
+  background-color: #1e1e1e;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-x: auto;
+  max-width: calc(100% - 20px); /* Adjust the value as needed */
+}
+
+code.text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  color: #ddd; /* Default text color */
+}
+
+/* Syntax highlighting */
+.keyword {
+  color: #569CD6 !important; /* Keyword color */
+}
+
+.comment {
+  color: #6A9955 !important; /* Comment color */
+}
+
+.string {
+  color: #CE9178 !important; /* String color */
+}
+
+.number {
+  color: #B5CEA8 !important; /* Number color */
+}  
+
 
 .slide-in {
   opacity: 0; /* Initially hide the image */
