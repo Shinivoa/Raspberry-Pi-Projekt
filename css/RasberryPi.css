@@ -4,6 +4,15 @@
   padding: 20px;
 }
 
+
+* {
+  margin: 8px;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* animations for images */
 .slide-in {
   opacity: 0; /* Initially hide the image */
   transform: translateX(100px); /* Move the image to the left */
@@ -15,6 +24,7 @@
   transform: translateX(0); /* Slide the image in */
 }
 
+/* just maciek(code block cuz he's fat as hell) */
 .Maciek {
   height: 100vh;
   width: 100%;
@@ -26,6 +36,12 @@
   align-items: center;
   position: sticky;
 }
+/* texts and content */
+
+.content {
+  display: flex;
+  overflow: hidden;
+}
 
 .text {
   padding: 5rem;
@@ -33,17 +49,13 @@
   opacity: 1;
 }
 
-.content {
-  display: flex;
-  overflow: hidden;
-}
-
 .image img {
   width: 100%;
   object-fit: cover;
   padding: 2rem;
-}
+} 
 
+/* Top navigation bar and images */
 .Logo svg {
   width: 50px;
   left: auto;
@@ -58,7 +70,7 @@
 }
 
 .light-up-button {
-  background-color: #1e1e1e; /* Initial background color */
+  background-color: #1e1e1e; /* usual background color */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -69,7 +81,7 @@
 }
 
 .light-up-button:hover {
-  background-color: #5f5f5f; /* Background color on hover */
+  background-color: #5f5f5f; /* changes on hover */
   border-radius: 20px;
 }
 
@@ -84,14 +96,7 @@
   border-radius: 25px;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.288);
 }
-
-* {
-  margin: 8px;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
+/* items alligment and colors */
 main {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
@@ -124,7 +129,7 @@ footer > * {
 }
 
 
-
+/*labels and special sections */
 label {
   color: rgba(0, 184, 0, 0.747);
 }
@@ -158,7 +163,8 @@ section {
 
 section h2 {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-left: 11px;
+  font-size: 23px;
 }
 
 section p {
@@ -171,4 +177,10 @@ section ul {
 
 section li {
   margin-bottom: 15px;
+}
+/* headings */
+h4 {
+  margin: 0;
+  font-size: 35px;
+  margin-left: 10px;
 }
