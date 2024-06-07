@@ -12,7 +12,7 @@
   box-sizing: border-box;
 }
 
-/* animations for images */
+/* animations for images and shit */
 .slide-in {
   opacity: 0; /* Initially hide the image */
   transform: translateX(100px); /* Move the image to the left */
