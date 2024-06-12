@@ -7,13 +7,13 @@
 /* Styles for code block */
 pre {
   background-color: #1e1e1e;
-  border: 3px solid #ddd;
+  border: 4px solid #ddd;
   border-radius: 10px;
   padding: 10px;
   font-weight: normal;
   overflow-x: hidden; /* Hide horizontal scrollbar */
   overflow-y: hidden; /* Hide vertical scrollbar */
-  max-width: calc(100% - 30px); /* Adjust the value as needed */
+  max-width: calc(88%); /* Adjust the value as needed */
   background-color: #000000;
 }
 
@@ -163,15 +163,15 @@ footer {
   display: flex;
   align-items: center;
   position: sticky;
-  padding: 5px 100px; /* Corrected padding property */
+  padding: 5px 100px; 
   border-radius: 25px;
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.288);
   background-color: #1e1e1e;
-  margin-right: 50px;
+  margin-right: 40px;
 }
 
 footer > * {
-  margin-right: 10px; /* Adjust margin as needed to control spacing between elements */
+  margin-right: 10px; /* Adjusted margin to control spacing between elements */
 }
 
 /* labels and special sections */

@@ -91,7 +91,7 @@
           <section>
             <div class="text">
               <h1>Bewegungsmelder</h1>
-              <p class="text">
+              <p>
                 Der Bewegungssensor von Joy-IT ist ein hochpräzises Gerät, das Bewegungen in seiner Umgebung erfasst und in elektronische Signale umwandelt. 
                 Dieser Sensor besteht aus verschiedenen Komponenten wie Infrarot (IR)-Sensoren, Pyroelektrischen Sensoren und anderen Sensorelementen, die zusammenarbeiten, 
                 um Bewegungen zu erkennen und zu messen. Das Gerät ist typischerweise in einem kompakten Gehäuse untergebracht und verfügt über Anschlüsse, 
@@ -106,7 +106,9 @@
               </p>
             </div>
             <div>
-            <pre><code class="text">
+              <code class="content">
+                <pre>
+<code class="text">
 <span class="keyword">import</span> RPi.GPIO<span class="keyword"> as </span>GPIO
 <span class="keyword">import</span> time
 
@@ -122,24 +124,23 @@
 
 <span class="keyword">try:</span>
 <span class="comment"># Ereignisbehandlung für Bewegungserkennung</span>
-    GPIO.<span class="keyword">add_event_detect</span>(motion_pin, GPIO.RISING, callback = <span class="keyword">motion_detected</span>)
+  GPIO.<span class="keyword">add_event_detect</span>(motion_pin, GPIO.RISING, callback = <span class="keyword">motion_detected</span>)
 
 <span class="keyword">print</span>(<span class="string">"Bewegungsmelder aktiviert. Warten auf Bewegung..."</span>)
 
 <span class="keyword">while True:</span>    
-        time.<span class="keyword">sleep</span>(<span class="number">1</span>)
+time.<span class="keyword">sleep</span>(<span class="number">1</span>)
 
 <span class="keyword">except</span> KeyboardInterrupt:
     <span class="keyword">print</span>(<span class="string">"Programm beendet."</span>)
     GPIO.<span class="keyword">cleanup</span>()
-
-            </code></pre>
+              </code>
+            </pre>
           </div>
           </section>
         </main>
         <footer>
           <p>© 2024 Smart Home RaspberryPi Projekt</p>
-          <a href="https://www.youtube.com/watch?v=lkKnA4eX51c">AGB</a>
           <a href="/impressum.html">Impressum</a>
         </footer>
   </div>
