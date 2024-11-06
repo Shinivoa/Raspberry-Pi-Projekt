@@ -103,7 +103,7 @@ code {
 } 
 
 /* Top navigation bar and images */
-.Logo svg {
+.Logo{
   width: 50px;
   left: auto;
 }
